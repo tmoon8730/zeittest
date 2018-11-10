@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "*.js", "use": "@now/node" },
+    { "src": "index.html", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/redirect", "status": 301, "headers": { "Location": "https://zeit.co/" } }
+  ],
+  "env": {
+    "DATABASE_NAME": "test"
+  },
+  "regions": ["iad1"]
+}
